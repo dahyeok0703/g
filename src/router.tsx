@@ -1,6 +1,7 @@
 import { createBrowserRouter } from 'react-router-dom';
 import { AppShell } from './components/AppShell';
 import { BrowserPage } from './features/browser/BrowserPage';
+import { CountryPage } from './features/browser/CountryPage';
 import { CatalogPage } from './features/catalog/CatalogPage';
 import { CreatorPage } from './features/creator/CreatorPage';
 import { ComparePage } from './features/compare/ComparePage';
@@ -16,6 +17,7 @@ export const router = createBrowserRouter([
     errorElement: <NotFoundPage />,
     children: [
       { index: true, element: <BrowserPage /> },
+      { path: 'country/:id', element: <CountryPage /> },
       { path: 'catalog', element: <CatalogPage /> },
       { path: 'creator', element: <CreatorPage /> },
       { path: 'compare', element: <ComparePage /> },
