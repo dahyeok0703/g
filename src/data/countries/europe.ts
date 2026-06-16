@@ -8,20 +8,29 @@ export const EUROPE = [
     paramilitary: 250000, nuclearWarheads: 5580, hasMilitary: true, dataConfidence: 'medium',
     sources: ['IISS Military Balance', 'GlobalFirepower'],
     army: [
-      { platformId: 't90m', quantity: 600, status: 'active', notes: 'T-72B3/T-80 다수 별도' },
+      { platformId: 't90m', quantity: 600, status: 'active' },
+      { platformId: 't72b3', quantity: 1800, status: 'active' },
+      { platformId: 't80', quantity: 450, status: 'active' },
+      { platformId: 't14', quantity: 20, status: 'active', notes: '제한 배치' },
       { platformId: 'bmp3', quantity: 600, status: 'active' },
-      { platformId: 'himars', quantity: 200, status: 'active' },
+      { platformId: 'btr82', quantity: 1500, status: 'active' },
+      { platformId: 'himars', quantity: 200, status: 'active', notes: 'BM-30 Smerch 등' },
       { platformId: 's400-system', quantity: 57, status: 'active', notes: 'S-400 대대' },
+      { platformId: 's300', quantity: 100, status: 'active' },
     ],
     navy: [
       { platformId: 'gorshkov-frigate', quantity: 7, status: 'active' },
+      { platformId: 'sovremenny', quantity: 3, status: 'active' },
       { platformId: 'kilo-877', quantity: 24, status: 'active' },
       { platformId: 'liaoning-cv', quantity: 1, status: 'reserve', variant: 'Admiral Kuznetsov(수리 중)' },
     ],
     airForce: [
       { platformId: 'su57', quantity: 22, status: 'active' },
       { platformId: 'su35', quantity: 110, status: 'active' },
+      { platformId: 'su34', quantity: 130, status: 'active' },
+      { platformId: 'mig31', quantity: 130, status: 'active' },
       { platformId: 'mig29', quantity: 100, status: 'active' },
+      { platformId: 'ka52', quantity: 110, status: 'active' },
     ],
     strategic: [
       { platformId: 's400-system', quantity: 0, status: 'active', notes: 'RVSN: 토폴-M/야르스 ICBM (추상화)' },
@@ -39,6 +48,7 @@ export const EUROPE = [
     navy: [
       { platformId: 'qe-carrier', quantity: 2, status: 'active' },
       { platformId: 'type45', quantity: 6, status: 'active' },
+      { platformId: 'type26', quantity: 8, status: 'ordered', variant: 'City-class' },
       { platformId: 'virginia-ssn', quantity: 0, status: 'active', notes: 'Astute급 SSN (근사)' },
       { platformId: 'ohio-ssbn', quantity: 4, status: 'active', notes: 'Vanguard급 SSBN' },
     ],
@@ -56,8 +66,8 @@ export const EUROPE = [
     paramilitary: 100000, nuclearWarheads: 290, hasMilitary: true, dataConfidence: 'high',
     sources: ['IISS Military Balance', 'French MoD'],
     army: [
-      { platformId: 'leopard2a7', quantity: 0, status: 'active', notes: 'Leclerc 전차 200여 대' },
-      { platformId: 'pzh2000', quantity: 0, status: 'active', notes: 'CAESAR 자주포' },
+      { platformId: 'leclerc', quantity: 222, status: 'active' },
+      { platformId: 'pzh2000', quantity: 0, status: 'active', notes: 'CAESAR 자주포 109문' },
     ],
     navy: [
       { platformId: 'charles-de-gaulle', quantity: 1, status: 'active' },
@@ -83,7 +93,7 @@ export const EUROPE = [
     ],
     navy: [
       { platformId: 'fremm-fr', quantity: 0, status: 'active', notes: 'F125/F124 프리깃 (근사)' },
-      { platformId: 'kilo-877', quantity: 6, status: 'active', variant: 'Type 212A' },
+      { platformId: 'type212', quantity: 6, status: 'active' },
     ],
     airForce: [
       { platformId: 'typhoon', quantity: 138, status: 'active' },
@@ -133,7 +143,7 @@ export const EUROPE = [
     population: 10500000, defenseBudget_usd: 12000000000, activePersonnel: 24000, reservePersonnel: 11000,
     paramilitary: 800, hasMilitary: true, dataConfidence: 'high',
     army: [{ platformId: 'leopard2a7', quantity: 110, status: 'active', variant: 'Strv 122' }, { platformId: 'k9-thunder', quantity: 48, status: 'active', variant: 'Archer' }],
-    navy: [{ platformId: 'kilo-877', quantity: 5, status: 'active', variant: 'Gotland/Södermanland' }], airForce: [{ platformId: 'typhoon', quantity: 0, status: 'active', notes: 'JAS-39 Gripen 90+' }],
+    navy: [{ platformId: 'kilo-877', quantity: 5, status: 'active', variant: 'Gotland/Södermanland' }], airForce: [{ platformId: 'gripen-e', quantity: 90, status: 'active', variant: 'JAS-39C/E' }],
   },
   {
     id: 'FI', name: 'Finland', nameKo: '핀란드', region: 'europe', flagEmoji: '🇫🇮', dataTier: 3,

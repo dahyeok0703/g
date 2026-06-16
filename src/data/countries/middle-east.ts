@@ -9,7 +9,8 @@ export const MIDDLE_EAST = [
     sources: ['IISS Military Balance', 'GlobalFirepower'],
     army: [
       { platformId: 'merkava4', quantity: 400, status: 'active' },
-      { platformId: 'm2a3', quantity: 0, status: 'active', notes: 'Namer 중APC' },
+      { platformId: 'namer', quantity: 200, status: 'active' },
+      { platformId: 'iron-dome', quantity: 10, status: 'active', notes: '아이언돔 포대' },
       { platformId: 'chunmoo', quantity: 0, status: 'active', notes: 'PULS 다연장' },
     ],
     navy: [
@@ -31,7 +32,8 @@ export const MIDDLE_EAST = [
     paramilitary: 156000, nuclearWarheads: 0, hasMilitary: true, dataConfidence: 'medium',
     sources: ['IISS Military Balance', 'GlobalFirepower'],
     army: [
-      { platformId: 'leopard2a7', quantity: 316, status: 'active', variant: 'Leopard 2A4 + Altay 도입' },
+      { platformId: 'leopard2a7', quantity: 316, status: 'active', variant: 'Leopard 2A4' },
+      { platformId: 'altay', quantity: 0, status: 'ordered', notes: '양산 시작' },
       { platformId: 'pzh2000', quantity: 0, status: 'active', notes: 'T-155 Fırtına 자주포' },
       { platformId: 'chunmoo', quantity: 0, status: 'active', notes: 'TRLG/Kasırga 다연장' },
     ],
@@ -42,7 +44,8 @@ export const MIDDLE_EAST = [
     ],
     airForce: [
       { platformId: 'f16c', quantity: 245, status: 'active' },
-      { platformId: 'mq9', quantity: 0, status: 'active', notes: 'Bayraktar TB2/Akıncı 드론 다수' },
+      { platformId: 'kaan', quantity: 0, status: 'ordered', notes: '시제 비행' },
+      { platformId: 'tb2', quantity: 100, status: 'active', notes: 'Bayraktar TB2/Akıncı 다수' },
     ],
   },
   {

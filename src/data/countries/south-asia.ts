@@ -9,6 +9,7 @@ export const SOUTH_ASIA = [
     sources: ['IISS Military Balance', 'GlobalFirepower'],
     army: [
       { platformId: 't90m', quantity: 1300, status: 'active', variant: 'T-90S Bhishma' },
+      { platformId: 'arjun', quantity: 140, status: 'active' },
       { platformId: 'bmp3', quantity: 2500, status: 'active', variant: 'BMP-2 Sarath' },
       { platformId: 'k9-thunder', quantity: 100, status: 'active', variant: 'K9 Vajra-T' },
       { platformId: 'himars', quantity: 60, status: 'active', variant: 'Pinaka/Smerch' },
@@ -21,6 +22,7 @@ export const SOUTH_ASIA = [
     airForce: [
       { platformId: 'su30mki', quantity: 260, status: 'active' },
       { platformId: 'rafale', quantity: 36, status: 'active' },
+      { platformId: 'tejas', quantity: 40, status: 'active' },
       { platformId: 'mig29', quantity: 60, status: 'active', variant: 'MiG-29UPG' },
     ],
     strategic: [
@@ -33,7 +35,7 @@ export const SOUTH_ASIA = [
     paramilitary: 291000, nuclearWarheads: 170, hasMilitary: true, dataConfidence: 'medium', sources: ['IISS Military Balance'],
     army: [{ platformId: 'type99a', quantity: 600, status: 'active', variant: 'Al-Khalid/VT-4' }, { platformId: 'himars', quantity: 0, status: 'active', notes: 'A-100/Fatah 다연장' }],
     navy: [{ platformId: 'kilo-877', quantity: 5, status: 'active', variant: 'Agosta 90B/Hangor' }, { platformId: 'opv-generic', quantity: 4, status: 'active', variant: 'Tughril급' }],
-    airForce: [{ platformId: 'j20', quantity: 0, status: 'active', notes: 'JF-17 Thunder 150+' }, { platformId: 'f16c', quantity: 75, status: 'active' }],
+    airForce: [{ platformId: 'jf17', quantity: 150, status: 'active' }, { platformId: 'f16c', quantity: 75, status: 'active' }],
     strategic: [{ platformId: 'type99a', quantity: 0, status: 'active', notes: 'Shaheen/Ghauri 탄도미사일' }],
   },
   {

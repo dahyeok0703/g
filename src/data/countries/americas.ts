@@ -10,8 +10,11 @@ export const AMERICAS = [
     army: [
       { platformId: 'm1a2', quantity: 2500, status: 'active' },
       { platformId: 'm2a3', quantity: 3000, status: 'active' },
+      { platformId: 'stryker', quantity: 3700, status: 'active' },
       { platformId: 'himars', quantity: 410, status: 'active' },
+      { platformId: 'm270', quantity: 225, status: 'active' },
       { platformId: 'patriot', quantity: 60, status: 'active', notes: '패트리어트 포대' },
+      { platformId: 'thaad-system', quantity: 7, status: 'active' },
     ],
     navy: [
       { platformId: 'gerald-ford', quantity: 1, status: 'active' },
@@ -24,12 +27,15 @@ export const AMERICAS = [
     airForce: [
       { platformId: 'f22', quantity: 180, status: 'active' },
       { platformId: 'f35a', quantity: 450, status: 'active' },
+      { platformId: 'f15ex', quantity: 8, status: 'active' },
       { platformId: 'f16c', quantity: 780, status: 'active' },
       { platformId: 'fa18ef', quantity: 530, status: 'active', notes: '해군/해병 항공' },
+      { platformId: 'a10', quantity: 218, status: 'active' },
       { platformId: 'b2', quantity: 20, status: 'active' },
       { platformId: 'b52h', quantity: 76, status: 'active' },
       { platformId: 'ah64e', quantity: 700, status: 'active' },
       { platformId: 'mq9', quantity: 300, status: 'active' },
+      { platformId: 'p8', quantity: 128, status: 'active', notes: '해군 해상초계' },
       { platformId: 'e3-awacs', quantity: 31, status: 'active' },
     ],
     strategic: [
@@ -51,7 +57,7 @@ export const AMERICAS = [
     paramilitary: 395000, hasMilitary: true, dataConfidence: 'medium', sources: ['IISS Military Balance'],
     army: [{ platformId: 'leopard2a7', quantity: 220, status: 'active', variant: 'Leopard 1A5/EE-T1' }, { platformId: 'chunmoo', quantity: 0, status: 'active', notes: 'ASTROS II 다연장' }],
     navy: [{ platformId: 'qe-carrier', quantity: 1, status: 'active', variant: 'Atlântico (LHD)' }, { platformId: 'kilo-877', quantity: 5, status: 'active', variant: 'Riachuelo/Tupi' }],
-    airForce: [{ platformId: 'typhoon', quantity: 0, status: 'active', notes: 'Gripen E 36' }],
+    airForce: [{ platformId: 'gripen-e', quantity: 36, status: 'active', variant: 'Gripen E' }],
   },
   {
     id: 'MX', name: 'Mexico', nameKo: '멕시코', region: 'americas', flagEmoji: '🇲🇽', dataTier: 3,

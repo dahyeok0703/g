@@ -17,12 +17,14 @@ export const EAST_ASIA = [
       { platformId: 'liaoning-cv', quantity: 2, status: 'active', notes: 'Liaoning + Shandong' },
       { platformId: 'type055', quantity: 8, status: 'active' },
       { platformId: 'type052d', quantity: 25, status: 'active' },
+      { platformId: 'type054a', quantity: 40, status: 'active' },
       { platformId: 'kilo-877', quantity: 12, status: 'active', variant: 'Kilo + Yuan급 근사' },
     ],
     airForce: [
       { platformId: 'j20', quantity: 200, status: 'active' },
+      { platformId: 'j16', quantity: 250, status: 'active' },
+      { platformId: 'j10c', quantity: 250, status: 'active' },
       { platformId: 'su35', quantity: 24, status: 'active' },
-      { platformId: 'mig29', quantity: 0, status: 'retired' },
     ],
     strategic: [
       { platformId: 'himars', quantity: 0, status: 'active', notes: 'DF 계열 전략로켓군 (플랫폼 추상화)' },
@@ -34,17 +36,20 @@ export const EAST_ASIA = [
     paramilitary: 14000, nuclearWarheads: 0, hasMilitary: true, dataConfidence: 'high',
     sources: ['IISS Military Balance', 'JMSDF/JASDF 공개자료'],
     army: [
-      { platformId: 'leopard2a7', quantity: 0, status: 'active', notes: 'Type 10/90 전차 (근사 표현)' },
+      { platformId: 'type10', quantity: 110, status: 'active' },
+      { platformId: 'type90', quantity: 340, status: 'active' },
       { platformId: 'pzh2000', quantity: 0, status: 'active', notes: 'Type 99 자주포' },
     ],
     navy: [
       { platformId: 'izumo-ddh', quantity: 2, status: 'active' },
       { platformId: 'maya-ddg', quantity: 2, status: 'active' },
-      { platformId: 'sejong-kdx3', quantity: 0, status: 'active', notes: '아타고/공고급 이지스 (근사)' },
+      { platformId: 'atago', quantity: 2, status: 'active' },
+      { platformId: 'soryu', quantity: 12, status: 'active', variant: 'Sōryū/Taigei' },
     ],
     airForce: [
       { platformId: 'f35a', quantity: 40, status: 'active' },
       { platformId: 'f15k', quantity: 200, status: 'active', variant: 'F-15J' },
+      { platformId: 'mitsubishi-f2', quantity: 90, status: 'active' },
     ],
   },
   {

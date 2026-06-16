@@ -20,7 +20,7 @@ export const AFRICA = [
     id: 'ZA', name: 'South Africa', nameKo: '남아프리카공화국', region: 'africa', flagEmoji: '🇿🇦', dataTier: 3,
     population: 60000000, defenseBudget_usd: 3000000000, activePersonnel: 73000, reservePersonnel: 15000,
     paramilitary: 0, hasMilitary: true, dataConfidence: 'medium',
-    army: [{ platformId: 'leopard2a7', quantity: 0, status: 'active', notes: 'Olifant Mk2' }], navy: [{ platformId: 'fremm-fr', quantity: 4, status: 'active', variant: 'Valour급' }, { platformId: 'kilo-877', quantity: 3, status: 'active', variant: 'Heroine급 (Type 209)' }], airForce: [{ platformId: 'typhoon', quantity: 0, status: 'active', notes: 'Gripen 26' }],
+    army: [{ platformId: 'leopard2a7', quantity: 0, status: 'active', notes: 'Olifant Mk2' }], navy: [{ platformId: 'fremm-fr', quantity: 4, status: 'active', variant: 'Valour급' }, { platformId: 'kilo-877', quantity: 3, status: 'active', variant: 'Heroine급 (Type 209)' }], airForce: [{ platformId: 'gripen-e', quantity: 26, status: 'active', variant: 'Gripen C/D' }],
   },
   {
     id: 'MA', name: 'Morocco', nameKo: '모로코', region: 'africa', flagEmoji: '🇲🇦', dataTier: 3,
