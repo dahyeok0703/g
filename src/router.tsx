@@ -1,5 +1,5 @@
 import { lazy, Suspense } from 'react';
-import { createBrowserRouter } from 'react-router-dom';
+import { createHashRouter } from 'react-router-dom';
 import { AppShell } from './components/AppShell';
 import { NotFoundPage } from './components/NotFoundPage';
 import { Loading } from './components/Loading';
@@ -7,6 +7,10 @@ import { Loading } from './components/Loading';
 // Route-level code splitting (spec §1, §13). Browser is eager (landing); the
 // chart-heavy routes (Compare/Simulator pull in Recharts) and the rest load on
 // demand so the initial bundle stays lean.
+//
+// Hash routing: works without server-side rewrites, so deep links and reloads
+// are reliable inside sandboxed previews (StackBlitz/CodeSandbox) and static
+// hosts alike.
 import { BrowserPage } from './features/browser/BrowserPage';
 
 const lazyPage = (factory: () => Promise<Record<string, unknown>>, name: string) =>
@@ -20,7 +24,7 @@ const SimulatorPage = lazyPage(() => import('./features/simulator/SimulatorPage'
 
 const withSuspense = (node: React.ReactNode) => <Suspense fallback={<Loading />}>{node}</Suspense>;
 
-export const router = createBrowserRouter([
+export const router = createHashRouter([
   {
     path: '/',
     element: <AppShell />,

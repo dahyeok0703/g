@@ -9,7 +9,17 @@
 공개된 일반 제원(공개적으로 알려진 함급·기종·수량·탑재 무장명)만 다루는 **백과사전+게임**
 성격의 도구입니다. 수치는 대략값이며 사용자가 수정·보강할 수 있습니다.
 
-## 실행
+## StackBlitz에서 바로 플레이
+
+이 앱은 **완전한 클라이언트 사이드**(백엔드·API 키 불필요)라 StackBlitz에서 그대로 실행됩니다.
+
+**열기:** <https://stackblitz.com/github/dahyeok0703/g/tree/claude/kind-lamport-1bay3r>
+
+- 위 링크를 열면 StackBlitz가 자동으로 `npm install` 후 `npm run dev`를 실행합니다(`.stackblitzrc`).
+- 라우팅은 해시 기반(`/#/catalog` 등)이라 미리보기 새로고침/딥링크가 깨지지 않습니다.
+- 비공개 저장소라면 StackBlitz에서 GitHub 계정 연결 후 import 하거나, 코드를 새 Vite 프로젝트로 업로드하세요.
+
+## 실행 (로컬)
 
 ```bash
 npm install

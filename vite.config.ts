@@ -7,5 +7,7 @@ export default defineConfig({
   resolve: {
     alias: { '@': path.resolve(__dirname, 'src') },
   },
-  server: { port: 5173 },
+  // host:true lets the dev server be reachable from the sandbox preview proxy
+  // (StackBlitz/CodeSandbox); strictPort:false lets it fall back if taken.
+  server: { host: true, port: 5173, strictPort: false },
 });
