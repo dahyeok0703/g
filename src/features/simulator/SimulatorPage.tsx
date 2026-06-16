@@ -15,6 +15,7 @@ import { useCountries } from '@/features/compare/useCountries';
 import { simulate, DEFAULT_SCENARIO, type FactionInput, type ScenarioVars } from '@/sim';
 import { FactionBuilder } from './FactionBuilder';
 import { ScenarioControls } from './ScenarioControls';
+import { ScenarioSlots } from './ScenarioSlots';
 
 const COLOR_A = '#3FB68B';
 const COLOR_B = '#D8553F';
@@ -70,8 +71,17 @@ export function SimulatorPage() {
         <FactionBuilder title="진영 B" color={COLOR_B} ids={bIds} onChange={setBIds} excludeIds={aIds} />
       </div>
 
-      <div className="mt-3">
+      <div className="mt-3 grid gap-3 lg:grid-cols-2">
         <ScenarioControls scenario={scenario} onChange={(patch) => setScenario((s) => ({ ...s, ...patch }))} />
+        <ScenarioSlots
+          current={{ aIds, bIds, scenario }}
+          onLoad={(slot) => {
+            setAIds(slot.aIds);
+            setBIds(slot.bIds);
+            setScenario(slot.scenario);
+            setRan(false);
+          }}
+        />
       </div>
 
       <button
