@@ -228,3 +228,14 @@ export interface Region {
   name: string;
   nameKo: string;
 }
+
+/** Lightweight country entry for the browser grid / search (no full OOB). */
+export interface CountryMeta {
+  id: string;
+  name: string;
+  nameKo: string;
+  region: string;
+  flagEmoji?: string;
+  dataTier: DataTier;
+  hasMilitary: boolean;
+}
