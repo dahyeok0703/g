@@ -92,4 +92,19 @@ export const EAST_ASIA = [
       { platformId: 'himars', quantity: 0, status: 'active', notes: '화성 계열 ICBM/SRBM (전략군)' },
     ],
   },
+  {
+    id: 'TW', name: 'Taiwan', nameKo: '대만', region: 'east-asia', flagEmoji: '🇹🇼', dataTier: 2,
+    population: 23400000, defenseBudget_usd: 19000000000, activePersonnel: 169000, reservePersonnel: 1660000,
+    paramilitary: 12000, hasMilitary: true, dataConfidence: 'medium', sources: ['IISS Military Balance'],
+    army: [{ platformId: 'm1a2', quantity: 108, status: 'active', variant: 'M1A2T' }, { platformId: 'k9-thunder', quantity: 0, status: 'active', notes: 'M109 + Thunderbolt-2000' }, { platformId: 'himars', quantity: 29, status: 'ordered' }],
+    navy: [{ platformId: 'ticonderoga', quantity: 4, status: 'active', variant: 'Kee Lung급 (전 Kidd급)' }, { platformId: 'kilo-877', quantity: 2, status: 'active', variant: 'Hai Lung + Hai Kun(국산)' }],
+    airForce: [{ platformId: 'f16c', quantity: 140, status: 'active', variant: 'F-16V Block 70' }, { platformId: 'fa50', quantity: 0, status: 'active', notes: 'IDF 경국 + F-CK-1' }],
+    strategic: [{ platformId: 'himars', quantity: 0, status: 'active', notes: '雄風/天弓 미사일' }],
+  },
+  {
+    id: 'MN', name: 'Mongolia', nameKo: '몽골', region: 'east-asia', flagEmoji: '🇲🇳', dataTier: 4,
+    population: 3400000, defenseBudget_usd: 130000000, activePersonnel: 9000, reservePersonnel: 137000,
+    paramilitary: 7200, hasMilitary: true, dataConfidence: 'low', sources: ['내륙국 — 해군 없음'],
+    army: [{ platformId: 't90m', quantity: 0, status: 'active', notes: 'T-72A 노후 소수' }], navy: [], airForce: [{ platformId: 'mig29', quantity: 0, status: 'active', notes: 'MiG-29 소수/수송헬기' }],
+  },
 ] satisfies readonly Country[];
