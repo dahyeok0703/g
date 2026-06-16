@@ -9,6 +9,7 @@ import { koNumber, usd, intl } from '@/lib/format';
 import type { Branch, Country } from '@/types';
 import { useCountry } from './useCountry';
 import { InventoryList } from './InventoryList';
+import { PlatformDetail } from '@/features/catalog/PlatformDetail';
 
 const BRANCH_LABEL: Record<Branch, string> = {
   army: '육군',
@@ -85,6 +86,8 @@ function CountryBody({
     return list;
   }, [country]);
 
+  const [selected, setSelected] = useState<string | null>(null);
+
   const entries =
     branch === 'strategic' ? country.strategic ?? [] : country[branch];
 
@@ -113,8 +116,11 @@ function CountryBody({
 
       <Tabs items={tabs} active={branch} onChange={(k) => onBranch(k as Branch)} />
       <div className="mt-5">
-        <InventoryList entries={entries} branchLabel={BRANCH_LABEL[branch]} />
+        <InventoryList entries={entries} branchLabel={BRANCH_LABEL[branch]} onSelect={setSelected} />
       </div>
+
+      <PlatformDetail platformId={selected} onClose={() => setSelected(null)} />
+
 
       {country.sources && country.sources.length > 0 && (
         <p className="mt-8 font-mono text-[11px] text-hud-ink-soft">
