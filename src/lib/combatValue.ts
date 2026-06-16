@@ -25,6 +25,7 @@ const CATEGORY_BASE: Record<WeaponSystem['category'], number> = {
   sonar: 4,
   ew: 5,
   countermeasure: 2,
+  launcher: 2, // the launcher itself adds little — value comes from its loadout
 };
 
 /** Role multipliers — strategic reach is weighted higher than point defense. */

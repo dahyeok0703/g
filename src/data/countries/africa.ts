@@ -6,7 +6,7 @@ export const AFRICA = [
     id: 'DZ', name: 'Algeria', nameKo: '알제리', region: 'africa', flagEmoji: '🇩🇿', dataTier: 2,
     population: 45000000, defenseBudget_usd: 18000000000, activePersonnel: 130000, reservePersonnel: 150000,
     paramilitary: 187000, hasMilitary: true, dataConfidence: 'medium', sources: ['IISS Military Balance'],
-    army: [{ platformId: 't90m', quantity: 600, status: 'active', variant: 'T-90SA' }, { platformId: 'smerch', quantity: 0, status: 'active', notes: 'BM-30 다연장' }],
+    army: [{ platformId: 't90m', quantity: 600, status: 'active', variant: 'T-90SA' }, { platformId: 'himars', quantity: 0, status: 'active', notes: 'BM-30 다연장' }],
     navy: [{ platformId: 'kilo-877', quantity: 6, status: 'active' }, { platformId: 'fremm-fr', quantity: 2, status: 'active', variant: 'MEKO A-200' }],
     airForce: [{ platformId: 'su35', quantity: 0, status: 'ordered' }, { platformId: 'su30mki', quantity: 44, status: 'active', variant: 'Su-30MKA' }, { platformId: 'mig29', quantity: 24, status: 'active' }],
   },

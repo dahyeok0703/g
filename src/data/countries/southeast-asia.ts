@@ -14,7 +14,7 @@ export const SOUTHEAST_ASIA = [
     id: 'VN', name: 'Vietnam', nameKo: '베트남', region: 'southeast-asia', flagEmoji: '🇻🇳', dataTier: 2,
     population: 99000000, defenseBudget_usd: 6500000000, activePersonnel: 470000, reservePersonnel: 5000000,
     paramilitary: 40000, hasMilitary: true, dataConfidence: 'medium', sources: ['IISS Military Balance'],
-    army: [{ platformId: 't90m', quantity: 64, status: 'active', variant: 'T-90S' }, { platformId: 'smerch', quantity: 0, status: 'active', notes: 'BM-21/EXTRA' }],
+    army: [{ platformId: 't90m', quantity: 64, status: 'active', variant: 'T-90S' }, { platformId: 'himars', quantity: 0, status: 'active', notes: 'BM-21/EXTRA' }],
     navy: [{ platformId: 'kilo-877', quantity: 6, status: 'active' }, { platformId: 'gorshkov-frigate', quantity: 4, status: 'active', variant: 'Gepard 3.9' }],
     airForce: [{ platformId: 'su30mki', quantity: 35, status: 'active', variant: 'Su-30MK2' }],
   },

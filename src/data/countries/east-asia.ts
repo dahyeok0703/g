@@ -79,7 +79,7 @@ export const EAST_ASIA = [
     sources: ['IISS Military Balance(추정)', 'Wikipedia: KPA'],
     army: [
       { platformId: 't90m', quantity: 0, status: 'active', notes: '천마호/선군호 (T-62/T-72 파생, 근사)' },
-      { platformId: 'smerch', quantity: 0, status: 'active', notes: '240mm/300mm 방사포 다수' },
+      { platformId: 'himars', quantity: 0, status: 'active', notes: '240mm/300mm 방사포 다수' },
     ],
     navy: [
       { platformId: 'kilo-877', quantity: 20, status: 'active', notes: '로미오급 등 노후 잠수함 다수' },

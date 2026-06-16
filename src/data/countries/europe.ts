@@ -10,7 +10,7 @@ export const EUROPE = [
     army: [
       { platformId: 't90m', quantity: 600, status: 'active', notes: 'T-72B3/T-80 다수 별도' },
       { platformId: 'bmp3', quantity: 600, status: 'active' },
-      { platformId: 'smerch', quantity: 200, status: 'active' },
+      { platformId: 'himars', quantity: 200, status: 'active' },
       { platformId: 's400-system', quantity: 57, status: 'active', notes: 'S-400 대대' },
     ],
     navy: [
@@ -34,7 +34,7 @@ export const EUROPE = [
     sources: ['IISS Military Balance', 'UK MoD'],
     army: [
       { platformId: 'challenger2', quantity: 213, status: 'active', notes: 'Challenger 3 업그레이드 진행' },
-      { platformId: 'm777-155', quantity: 0, status: 'active', notes: 'AS-90 자주포' },
+      { platformId: 'pzh2000', quantity: 0, status: 'active', notes: 'AS-90 자주포' },
     ],
     navy: [
       { platformId: 'qe-carrier', quantity: 2, status: 'active' },

@@ -32,7 +32,7 @@ export const MIDDLE_EAST = [
     sources: ['IISS Military Balance', 'GlobalFirepower'],
     army: [
       { platformId: 'leopard2a7', quantity: 316, status: 'active', variant: 'Leopard 2A4 + Altay 도입' },
-      { platformId: 'm777-155', quantity: 0, status: 'active', notes: 'T-155 Fırtına 자주포' },
+      { platformId: 'pzh2000', quantity: 0, status: 'active', notes: 'T-155 Fırtına 자주포' },
       { platformId: 'chunmoo', quantity: 0, status: 'active', notes: 'TRLG/Kasırga 다연장' },
     ],
     navy: [
@@ -57,10 +57,10 @@ export const MIDDLE_EAST = [
     id: 'IR', name: 'Iran', nameKo: '이란', region: 'middle-east', flagEmoji: '🇮🇷', dataTier: 2,
     population: 89000000, defenseBudget_usd: 10000000000, activePersonnel: 610000, reservePersonnel: 350000,
     paramilitary: 220000, hasMilitary: true, dataConfidence: 'low', sources: ['IISS Military Balance(추정)'],
-    army: [{ platformId: 't90m', quantity: 0, status: 'active', notes: 'Karrar/T-72S' }, { platformId: 'smerch', quantity: 0, status: 'active', notes: 'Fajr/Zelzal 로켓' }],
+    army: [{ platformId: 't90m', quantity: 0, status: 'active', notes: 'Karrar/T-72S' }, { platformId: 'himars', quantity: 0, status: 'active', notes: 'Fajr/Zelzal 로켓' }],
     navy: [{ platformId: 'kilo-877', quantity: 3, status: 'active' }, { platformId: 'fast-patrol-boat', quantity: 100, status: 'active', notes: 'IRGC 고속정 다수' }],
     airForce: [{ platformId: 'mig29', quantity: 35, status: 'active' }, { platformId: 'f16c', quantity: 0, status: 'active', notes: 'F-14A 노후 + Su-35 도입' }],
-    strategic: [{ platformId: 'smerch', quantity: 0, status: 'active', notes: 'Shahab/Khorramshahr 탄도미사일' }],
+    strategic: [{ platformId: 'himars', quantity: 0, status: 'active', notes: 'Shahab/Khorramshahr 탄도미사일' }],
   },
   {
     id: 'EG', name: 'Egypt', nameKo: '이집트', region: 'middle-east', flagEmoji: '🇪🇬', dataTier: 2,

@@ -77,6 +77,7 @@ export const CATEGORY_LABEL: Record<WeaponCategory, string> = {
   ew: '전자전',
   ciws: '근접방어(CIWS)',
   countermeasure: '기만체',
+  launcher: '발사기',
 };
 
 export const ROLE_LABEL: Record<string, string> = {

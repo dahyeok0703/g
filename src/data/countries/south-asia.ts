@@ -11,7 +11,7 @@ export const SOUTH_ASIA = [
       { platformId: 't90m', quantity: 1300, status: 'active', variant: 'T-90S Bhishma' },
       { platformId: 'bmp3', quantity: 2500, status: 'active', variant: 'BMP-2 Sarath' },
       { platformId: 'k9-thunder', quantity: 100, status: 'active', variant: 'K9 Vajra-T' },
-      { platformId: 'smerch', quantity: 60, status: 'active', variant: 'Pinaka/Smerch' },
+      { platformId: 'himars', quantity: 60, status: 'active', variant: 'Pinaka/Smerch' },
     ],
     navy: [
       { platformId: 'vikrant-cv', quantity: 2, status: 'active', notes: 'Vikramaditya + Vikrant' },
@@ -31,7 +31,7 @@ export const SOUTH_ASIA = [
     id: 'PK', name: 'Pakistan', nameKo: '파키스탄', region: 'south-asia', flagEmoji: '🇵🇰', dataTier: 2,
     population: 241000000, defenseBudget_usd: 10300000000, activePersonnel: 654000, reservePersonnel: 550000,
     paramilitary: 291000, nuclearWarheads: 170, hasMilitary: true, dataConfidence: 'medium', sources: ['IISS Military Balance'],
-    army: [{ platformId: 'type99a', quantity: 600, status: 'active', variant: 'Al-Khalid/VT-4' }, { platformId: 'smerch', quantity: 0, status: 'active', notes: 'A-100/Fatah 다연장' }],
+    army: [{ platformId: 'type99a', quantity: 600, status: 'active', variant: 'Al-Khalid/VT-4' }, { platformId: 'himars', quantity: 0, status: 'active', notes: 'A-100/Fatah 다연장' }],
     navy: [{ platformId: 'kilo-877', quantity: 5, status: 'active', variant: 'Agosta 90B/Hangor' }, { platformId: 'opv-generic', quantity: 4, status: 'active', variant: 'Tughril급' }],
     airForce: [{ platformId: 'j20', quantity: 0, status: 'active', notes: 'JF-17 Thunder 150+' }, { platformId: 'f16c', quantity: 75, status: 'active' }],
     strategic: [{ platformId: 'type99a', quantity: 0, status: 'active', notes: 'Shaheen/Ghauri 탄도미사일' }],

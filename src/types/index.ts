@@ -20,7 +20,8 @@ export type WeaponCategory =
   | 'sonar'
   | 'ew'
   | 'ciws'
-  | 'countermeasure';
+  | 'countermeasure'
+  | 'launcher';
 
 export type MissileRole =
   | 'anti-ship'
