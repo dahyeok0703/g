@@ -7,8 +7,9 @@ import { useCustomStore } from '@/store/useCustomStore';
 import { CATEGORY_LABEL, DOMAIN_TYPE_LABEL } from '@/lib/labels';
 import { WeaponForm } from './WeaponForm';
 import { PlatformForm } from './PlatformForm';
+import { BulkImport } from './BulkImport';
 
-type Tab = 'weapon' | 'platform' | 'manage';
+type Tab = 'weapon' | 'platform' | 'bulk' | 'manage';
 
 export function CreatorPage() {
   const [tab, setTab] = useState<Tab>('weapon');
@@ -29,6 +30,7 @@ export function CreatorPage() {
         items={[
           { key: 'weapon', label: '무기 제작' },
           { key: 'platform', label: '플랫폼 제작' },
+          { key: 'bulk', label: '대량 가져오기' },
           { key: 'manage', label: '내 커스텀', count: weapons.length + platforms.length + countries.length },
         ]}
         active={tab}
@@ -38,6 +40,7 @@ export function CreatorPage() {
       <div className="mt-6">
         {tab === 'weapon' && <WeaponForm />}
         {tab === 'platform' && <PlatformForm />}
+        {tab === 'bulk' && <BulkImport />}
         {tab === 'manage' && <ManageList />}
       </div>
     </div>

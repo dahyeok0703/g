@@ -24,7 +24,17 @@ export interface CustomState {
 
   /** Replace the entire custom dataset (JSON import, spec §4.3). */
   importAll: (data: Partial<Pick<CustomState, 'weapons' | 'platforms' | 'countries'>>) => void;
+  /** Batched upsert of many items at once (bulk import pipeline). */
+  mergeMany: (data: { weapons?: WeaponSystem[]; platforms?: Platform[]; countries?: Country[] }) => void;
   clearAll: () => void;
+}
+
+/** Single-pass upsert of `incoming` into `list` by id (incoming wins). */
+function mergeById<T extends { id: string }>(list: T[], incoming: T[]): T[] {
+  if (incoming.length === 0) return list;
+  const map = new Map(list.map((x) => [x.id, x]));
+  for (const item of incoming) map.set(item.id, item);
+  return [...map.values()];
 }
 
 const upsert = <T extends { id: string }>(list: T[], item: T): T[] => {
@@ -58,6 +68,12 @@ export const useCustomStore = create<CustomState>()(
           weapons: data.weapons ?? s.weapons,
           platforms: data.platforms ?? s.platforms,
           countries: data.countries ?? s.countries,
+        })),
+      mergeMany: (data) =>
+        set((s) => ({
+          weapons: mergeById(s.weapons, (data.weapons ?? []).map((w) => ({ ...w, isCustom: true }))),
+          platforms: mergeById(s.platforms, (data.platforms ?? []).map((p) => ({ ...p, isCustom: true }))),
+          countries: mergeById(s.countries, data.countries ?? []),
         })),
       clearAll: () => set({ weapons: [], platforms: [], countries: [] }),
     }),

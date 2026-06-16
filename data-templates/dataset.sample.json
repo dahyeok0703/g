@@ -1,0 +1,13 @@
+{
+  "version": "1",
+  "weapons": [
+    { "id": "sample-aam", "name": "Sample AAM", "nameKo": "예시 공대공", "category": "missile", "role": "anti-air-aam", "origin": "XX", "introduced": 2025, "range_km": 120, "speed_mach": 4, "warhead_kg": 20, "guidance": ["active-radar", "inertial"] },
+    { "id": "sample-cannon", "name": "Sample 30mm", "nameKo": "예시 30mm", "category": "gun", "origin": "XX", "caliber_mm": 30, "rof_rpm": 200, "range_km": 4 }
+  ],
+  "platforms": [
+    { "id": "sample-jet", "name": "Sample Multirole", "nameKo": "예시 멀티롤", "domain": "air", "type": "multirole", "origin": "XX", "generation": "4.5세대", "maxSpeed_mach": 2, "combatRadius_km": 1200, "hardpoints": 10, "armament": [{ "mountType": "hardpoint", "weaponSystemId": "sample-aam", "quantity": 6 }] }
+  ],
+  "countries": [
+    { "id": "ZZ", "name": "Zedland", "nameKo": "제드랜드", "region": "europe", "flagEmoji": "🏴", "dataTier": 3, "hasMilitary": true, "activePersonnel": 50000, "defenseBudget_usd": 5000000000, "army": [], "navy": [], "airForce": [{ "platformId": "sample-jet", "quantity": 24 }], "dataConfidence": "low", "sources": ["사용자 임포트 예시"] }
+  ]
+}

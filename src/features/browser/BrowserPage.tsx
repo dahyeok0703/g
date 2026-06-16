@@ -5,23 +5,37 @@ import { PageHeader } from '@/components/PageHeader';
 import { Badge, TierBadge } from '@/components/ui/Badge';
 import { COUNTRY_DIRECTORY } from '@/data/countries/directory';
 import { REGIONS } from '@/data/regions';
+import { useCustomStore } from '@/store/useCustomStore';
 import { cn } from '@/lib/cn';
-import type { CountryMeta } from '@/types';
+import type { Country, CountryMeta } from '@/types';
+
+const toMeta = (c: Country): CountryMeta => ({
+  id: c.id, name: c.name, nameKo: c.nameKo, region: c.region,
+  flagEmoji: c.flagEmoji, dataTier: c.dataTier, hasMilitary: c.hasMilitary,
+});
 
 export function BrowserPage() {
   const navigate = useNavigate();
   const [region, setRegion] = useState<string>('all');
   const [query, setQuery] = useState('');
+  const customCountries = useCustomStore((s) => s.countries);
+
+  // seed directory + imported/custom countries (custom wins on id collision)
+  const directory = useMemo(() => {
+    const map = new Map(COUNTRY_DIRECTORY.map((c) => [c.id, c]));
+    for (const c of customCountries) map.set(c.id, toMeta(c));
+    return [...map.values()];
+  }, [customCountries]);
 
   const counts = useMemo(() => {
     const m = new Map<string, number>();
-    for (const c of COUNTRY_DIRECTORY) m.set(c.region, (m.get(c.region) ?? 0) + 1);
+    for (const c of directory) m.set(c.region, (m.get(c.region) ?? 0) + 1);
     return m;
-  }, []);
+  }, [directory]);
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
-    return COUNTRY_DIRECTORY.filter((c) => {
+    return directory.filter((c) => {
       if (region !== 'all' && c.region !== region) return false;
       if (!q) return true;
       return (
@@ -30,14 +44,14 @@ export function BrowserPage() {
         c.id.toLowerCase().includes(q)
       );
     }).sort((a, b) => a.dataTier - b.dataTier || a.nameKo.localeCompare(b.nameKo));
-  }, [region, query]);
+  }, [region, query, directory]);
 
   return (
     <div>
       <PageHeader
         eyebrow="Order of Battle"
         title="국가 군사력 브라우저"
-        subtitle={`${COUNTRY_DIRECTORY.length}개국 · ${REGIONS.length}개 지역. 지역으로 좁히거나 검색해 국가를 선택하면 편제를 드릴다운합니다.`}
+        subtitle={`${directory.length}개국 · ${REGIONS.length}개 지역. 지역으로 좁히거나 검색해 국가를 선택하면 편제를 드릴다운합니다.`}
       />
 
       {/* search */}
@@ -53,7 +67,7 @@ export function BrowserPage() {
 
       {/* region filter */}
       <div className="mb-6 flex flex-wrap gap-1.5">
-        <RegionChip active={region === 'all'} onClick={() => setRegion('all')} label="전체" count={COUNTRY_DIRECTORY.length} />
+        <RegionChip active={region === 'all'} onClick={() => setRegion('all')} label="전체" count={directory.length} />
         {REGIONS.map((r) => (
           <RegionChip
             key={r.id}
