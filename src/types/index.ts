@@ -52,6 +52,7 @@ export interface WeaponSystem {
 
   // simulation-derived metric (Stage 10). Computed if absent.
   combatValue?: number;
+  notes?: string;
   isCustom?: boolean;
   dataConfidence?: DataConfidence;
 }
