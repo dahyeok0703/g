@@ -1,4 +1,5 @@
 import { NavLink, Outlet } from 'react-router-dom';
+import { ErrorBoundary } from './ErrorBoundary';
 import {
   Globe2,
   Boxes,
@@ -87,7 +88,9 @@ export function AppShell() {
       <main className="relative min-w-0 flex-1">
         <div className="pointer-events-none absolute inset-0 bg-grid bg-[size:32px_32px] opacity-40" />
         <div className="relative mx-auto max-w-6xl px-4 py-6 md:px-8 md:py-10">
-          <Outlet />
+          <ErrorBoundary>
+            <Outlet />
+          </ErrorBoundary>
         </div>
       </main>
     </div>
